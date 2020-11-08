@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Echo.Service", "src\Echo.Service\Echo.Service.csproj", "{59B6D1BF-44E0-421A-A693-55FA300DFFAB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0FCBC93A-902C-483A-B615-D47CB49DE26F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Echo.Client", "src\Echo.Client\Echo.Client.csproj", "{52BF0F57-15EA-4CBB-BFD5-D65B211526EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +19,19 @@ Global
 		{59B6D1BF-44E0-421A-A693-55FA300DFFAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59B6D1BF-44E0-421A-A693-55FA300DFFAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59B6D1BF-44E0-421A-A693-55FA300DFFAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52BF0F57-15EA-4CBB-BFD5-D65B211526EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52BF0F57-15EA-4CBB-BFD5-D65B211526EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52BF0F57-15EA-4CBB-BFD5-D65B211526EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52BF0F57-15EA-4CBB-BFD5-D65B211526EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2353513-5630-4DEC-A357-A104E8F2957B}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59B6D1BF-44E0-421A-A693-55FA300DFFAB} = {0FCBC93A-902C-483A-B615-D47CB49DE26F}
+		{52BF0F57-15EA-4CBB-BFD5-D65B211526EB} = {0FCBC93A-902C-483A-B615-D47CB49DE26F}
 	EndGlobalSection
 EndGlobal

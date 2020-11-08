@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "Echo.Client";
+
+package echo;
+
+// The echo service definition.
+service Echoer {
+  // Echoes a message back
+  rpc Say (SayRequest) returns (EchoReply);
+}
+
+// The request containing the message
+message SayRequest {
+  string message = 1;
+}
+
+// The response containing, containing the message.
+message EchoReply {
+  string message = 1;
+}

@@ -1,6 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/rider,csharp,dotnetcore,code,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=rider,csharp,dotnetcore,code,visualstudiocode
 
+*/.idea
+
 ### Code ###
 .vscode/*
 !.vscode/settings.json
@@ -218,6 +220,8 @@ csx/
 # Microsoft Azure Emulator
 ecf/
 rcf/
+
+.idea/*
 
 # Windows Store app package directories and files
 AppPackages/
