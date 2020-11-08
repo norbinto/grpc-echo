@@ -6,9 +6,9 @@ namespace Echo.Service.Services
 {
     public class EchoService: Echoer.EchoerBase
     {
-        private readonly Logger<EchoService> logger;
+        private readonly ILogger<EchoService> logger;
 
-        public EchoService(Logger<EchoService> logger) 
+        public EchoService(ILogger<EchoService> logger) 
         {
             this.logger = logger;
         }
