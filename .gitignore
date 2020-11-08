@@ -246,6 +246,7 @@ ClientBin/
 *.dbproj.schemaview
 *.jfm
 *.pfx
+!certificates/dev.pfx
 *.publishsettings
 orleans.codegen.cs
 
