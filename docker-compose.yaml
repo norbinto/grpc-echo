@@ -1,0 +1,12 @@
+version: '3.8'
+services: 
+  grpc-echo-service:
+    build: 
+      context: Echo/src/Echo.Service
+      dockerfile: 'Dockerfile'
+    environment: 
+      ECHO_CERT_PASSWORD: grpc
+    ports: 
+      - "5001:443"
+    volumes: 
+      - ./certificates:/certificates

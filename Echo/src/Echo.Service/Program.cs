@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Echo.Service
 {
@@ -15,6 +17,13 @@ namespace Echo.Service
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.ConfigureKestrel(kestrel =>
+                    {
+                        kestrel.ConfigureHttpsDefaults(https =>
+                        {
+                            https.ServerCertificate = new X509Certificate2("/certificates/dev.pfx", Environment.GetEnvironmentVariable("ECHO_CERT_PASSWORD"));
+                        });
+                    });
                 });
     }
 }
