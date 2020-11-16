@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "WhatTimeIsItNow.Client";
+
+package whattimeisitnow;
+
+// The whattimeisitnow service definition.
+service Timer {
+  // Timer a message back
+  rpc Say (SayRequest) returns (TimerReply);
+}
+
+// The request containing the message
+message SayRequest {
+  string message = 1;
+}
+
+// The response containing, containing the message.
+message TimerReply {
+  google.protobuf.Timestamp time = 1;
+}
+
+
+

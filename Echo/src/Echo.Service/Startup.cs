@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Echo.Service.Services;
+using WhatTimeIsItNow.Service.Services;
 
 namespace Echo.Service
 {
@@ -33,6 +34,8 @@ namespace Echo.Service
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<EchoService>();
+                
+                endpoints.MapGrpcService<TimeService>();
 
                 endpoints.MapGet("/", async context =>
                 {
